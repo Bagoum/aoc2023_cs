@@ -55,7 +55,7 @@ long FindArea(List<(long, Direction)> steps) {
                 if (lastCrossedCorner is { } d) {
                     //Paired corners count as one crossing if the vert directions are the same
                     // eg Up->Right and then Right->Up (1 crossing); Up->Right and then Right->Down (2 crossings)
-                    //Either way they don't contribute to internal width
+                    //Either way the second corner doesn't contribute to internal width
                     if (d != cornerDir)
                         ++crossedVerticals;
                     lastCrossedCorner = null;
